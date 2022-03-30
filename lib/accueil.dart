@@ -12,7 +12,7 @@ class Accueil extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: SafeArea(
-        child: Text("COUCOU"),
+        child: Text("COUCOUS"),
       ),
     );
   }
