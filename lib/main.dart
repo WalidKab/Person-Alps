@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:personalps/accueil.dart';
+import 'package:personalps/pageQuestions.dart';
 import 'package:provider/provider.dart';
 import 'models/user.dart';
+import 'pageQuestions.dart';
 
 void main() {
   runApp(
@@ -96,6 +98,16 @@ class _MyHomePageState extends State<MyHomePage> {
                   }
                 },
                 child: const Text('Submit'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const PageQuestions(title: 'test',)),
+                    );
+                },
+                child: const Text('questions'),
               ),
 
             ],
