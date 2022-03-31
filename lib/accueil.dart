@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:personalps/pageQuestions.dart';
 import 'package:personalps/view/ressources.dart';
 
 class Accueil extends StatefulWidget {
@@ -23,10 +24,7 @@ class _AccueilState extends State<Accueil> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Ressources(items: ["coucou", "coucou", "coucou", "coucou"]),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    PageQuestions(title: "ratata"),
     Text(
       'Index 2: School',
       style: optionStyle,
