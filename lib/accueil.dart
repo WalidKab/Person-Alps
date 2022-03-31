@@ -1,8 +1,10 @@
+import '/view/ressources.dart';
 import 'package:flutter/material.dart';
 import 'package:personalps/view/ressources.dart';
+import 'package:personalps/view/competence.dart';
 
 class Accueil extends StatefulWidget {
-  Accueil({
+  const Accueil({
     Key? key,
   }) : super(key: key);
 
@@ -22,15 +24,12 @@ class _AccueilState extends State<Accueil> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Ressources(items: ["coucou", "coucou", "coucou", "coucou"]),
+    RessourcePage(title: "Ressources"),
     Text(
       'Index 1: Business',
       style: optionStyle,
     ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
+    SkillsPage(),
   ];
 
   @override
@@ -47,7 +46,7 @@ class _AccueilState extends State<Accueil> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
-            label: 'Ascension',
+            label: 'Skills',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
