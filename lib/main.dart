@@ -33,7 +33,6 @@ class MyHomePage extends StatefulWidget {
 
   final String title;
 
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -42,7 +41,6 @@ class _MyHomePageState extends State<MyHomePage> {
   String login = "";
   String password = "";
   final _formKey = GlobalKey<FormState>();
-
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               const Text("Login :"),
               TextFormField(
-                onChanged: (text){
+                onChanged: (text) {
                   login = text;
                 },
                 // The validator receives the text that the user has entered.
@@ -71,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               const Text("Password :"),
               TextFormField(
-                onChanged: (text){
+                onChanged: (text) {
                   password = text;
                 },
                 // The validator receives the text that the user has entered.
@@ -84,11 +82,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               ElevatedButton(
                 onPressed: () {
-
                   if (_formKey.currentState!.validate()) {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Accueil()),
+                      MaterialPageRoute(builder: (context) => const Accueil()),
                     );
                     // ScaffoldMessenger.of(context).showSnackBar(
                     //   const SnackBar(content: Text('Processing Data')),
@@ -97,7 +94,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: const Text('Submit'),
               ),
-
             ],
           ),
         ),
