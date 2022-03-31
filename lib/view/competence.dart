@@ -177,6 +177,7 @@ class SkillsPage extends StatelessWidget {
               child: const Skills(),
             ),
           ),
+          Text("sdqdq")
         ],
       ),
     );
