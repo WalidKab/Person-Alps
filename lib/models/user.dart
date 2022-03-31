@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -36,7 +38,10 @@ class UserManager extends ChangeNotifier {
         body: {"identifier": login, "password": password});
     if (response.statusCode == 200) {
       isConnected = true;
-      await prefs.setString('token', "COUCOU");
+      var data = json.decode(response.body);
+      await prefs.setString('user', response.body);
+      user = User.fromJson(data);
+      await prefs.setString('token', data['jwt']);
       notifyListeners();
     } else {
       isConnected = false;
@@ -47,23 +52,26 @@ class UserManager extends ChangeNotifier {
 
 class User {
   String login;
-  //String password;
   String email;
   String token;
+  //String promotion;
+  //String expedition;
 
   User({
     required this.login,
     required this.email,
     required this.token,
-    //password
+    //required this.promotion,
+    //required this.expedition,
   });
 
-  /*  factory User.fromJson(Map<String, dynamic> json) {
+  factory User.fromJson(Map<String, dynamic> json) {
     return User(
-      login: json['user']['username'],  
-      //password: json['user']['password'],
+      login: json['user']['username'],
       email: json['user']['email'],
+      //promotion: json['user']['promotion'],
+      //expedition: json['user']['expedition'],
       token: json['jwt'],
     );
-  } */
+  }
 }
