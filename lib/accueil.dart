@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personalps/view/ressources.dart';
+import 'package:personalps/view/competence.dart';
 
 class Accueil extends StatefulWidget {
   Accueil({
@@ -22,11 +23,8 @@ class _AccueilState extends State<Accueil> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Ressources(items: ["coucou", "coucou", "coucou", "coucou"]),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    Ressources(items: ["test", "coucou", "coucou", "coucou"]),
+    SkillsPage(),
     Text(
       'Index 2: School',
       style: optionStyle,
@@ -47,7 +45,7 @@ class _AccueilState extends State<Accueil> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
-            label: 'Ascension',
+            label: 'Skills',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
