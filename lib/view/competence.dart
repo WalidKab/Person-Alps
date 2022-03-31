@@ -50,25 +50,19 @@ class Skills extends StatelessWidget {
     String text;
     switch (value.toInt()) {
       case 0:
-        text = 'Test';
+        text = 'Ponctualité';
         break;
       case 1:
-        text = 'Autre';
+        text = 'Assiduité';
         break;
       case 2:
-        text = 'yes';
+        text = 'Respect';
         break;
       case 3:
-        text = 'Tu';
+        text = 'Equipe';
         break;
       case 4:
-        text = 'Fr';
-        break;
-      case 5:
-        text = 'St';
-        break;
-      case 6:
-        text = 'Sn';
+        text = 'Langage';
         break;
       default:
         text = '';
@@ -152,20 +146,10 @@ class Skills extends StatelessWidget {
           showingTooltipIndicators: [0],
         ),
         BarChartGroupData(
-          x: 3,
+          x: 4,
           barRods: [
             BarChartRodData(
               toY: 13,
-              gradient: _barsGradient,
-            )
-          ],
-          showingTooltipIndicators: [0],
-        ),
-        BarChartGroupData(
-          x: 3,
-          barRods: [
-            BarChartRodData(
-              toY: 10,
               gradient: _barsGradient,
             )
           ],
