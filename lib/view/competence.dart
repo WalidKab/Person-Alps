@@ -177,7 +177,18 @@ class SkillsPage extends StatelessWidget {
               child: const Skills(),
             ),
           ),
-          Text("sdqdq")
+          Container(
+            margin: const EdgeInsets.only(top: 20.0, bottom: 20.0),
+            child: const Text("Choix de l'expédition",
+                style: TextStyle(fontWeight: FontWeight.bold)),
+          ),
+          Container(
+            margin: const EdgeInsets.only(
+                top: 20.0, bottom: 20.0, left: 20, right: 20),
+            child: const Text(
+                "L'expédition est le point sur lequel vous voulez travailler en priorité durant votre ascension."),
+          ),
+          Text("Vous pouvez le changer plus tard, dont worry!")
         ],
       ),
     );
