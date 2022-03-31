@@ -1,0 +1,37 @@
+{
+  "name": "person-alps",
+  "lockfileVersion": 2,
+  "requires": true,
+  "packages": {},
+  "dependencies": {
+    "putain": "^0.0.0"
+  },
+  "keywords": [
+    "personalps",
+    "heroku"
+  ],
+  "description": "A new Flutter project.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WalidKab/Person-Alps.git"
+  },
+  "engines": {
+    "node": "16.14.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WalidKab/Person-Alps/issues"
+  },
+  "homepage": "https://github.com/WalidKab/Person-Alps#readme"
+}
