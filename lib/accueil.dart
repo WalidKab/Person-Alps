@@ -1,8 +1,9 @@
+import '/view/ressources.dart';
 import 'package:flutter/material.dart';
 import 'package:personalps/view/ressources.dart';
 
 class Accueil extends StatefulWidget {
-  Accueil({
+  const Accueil({
     Key? key,
   }) : super(key: key);
 
@@ -22,7 +23,8 @@ class _AccueilState extends State<Accueil> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-    Ressources(items: ["coucou", "coucou", "coucou", "coucou"]),
+    RessourcePage(title: "Ressources"),
+    //Ressources(items: ["coucou", "coucou", "coucou", "coucou"]),
     Text(
       'Index 1: Business',
       style: optionStyle,
