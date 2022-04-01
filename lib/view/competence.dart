@@ -1,5 +1,8 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+import 'package:personalps/models/user.dart';
+import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Skills extends StatelessWidget {
   const Skills({Key? key}) : super(key: key);
@@ -164,7 +167,17 @@ class SkillsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Mes Compétences")),
+      appBar: AppBar(
+        title: Text("Mes Compétences"),
+        leading: GestureDetector(
+          onTap: () async {
+            final prefs = await SharedPreferences.getInstance();
+            prefs.remove('token');
+            context.read<UserManager>().disconnect();
+          },
+          child: Icon(Icons.logout),
+        ),
+      ),
       body: Column(
         children: [
           AspectRatio(
