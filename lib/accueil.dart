@@ -26,12 +26,9 @@ class _AccueilState extends State<Accueil> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     RessourcePage(title: "Ressources"),
-    Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
+    PageQuestions(title: "Questions"),
     SkillsPage(),
-
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
