@@ -1,5 +1,6 @@
 import '/view/ressources.dart';
 import 'package:flutter/material.dart';
+import 'package:personalps/pageQuestions.dart';
 import 'package:personalps/view/ressources.dart';
 import 'package:personalps/view/competence.dart';
 
@@ -30,7 +31,6 @@ class _AccueilState extends State<Accueil> {
       style: optionStyle,
     ),
     SkillsPage(),
-  ];
 
   @override
   Widget build(BuildContext context) {
